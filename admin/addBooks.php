@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$strNew = json_encode($data);
 			file_put_contents("../data/bookdb.json", $strNew);
 
-			header('Location: http://localhost/BDBooks/admin/bDetails.php');
+			header('Location: http://localhost/BDBooks-PHP/admin/bDetails.php');
 			exit();
 	   }
    }
@@ -220,8 +220,8 @@ function test_input($data) {
 <body>
 <div class="heading">
 	<div class="site-logo">
-		<a target="_blank" href="/BDBooks/index.php">
-		<img src="/BDBooks/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
+		<a target="_blank" href="/BDBooks-PHP/index.php">
+		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
 		</a>
 	</div>
 	
@@ -231,10 +231,10 @@ function test_input($data) {
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-  <li><a href="/BDBooks/admin/allBooks.php">All books</a></li>
-  <li><a href="/BDBooks/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks/admin/home.php">Samanta</a></li>
-  <li><a href="/BDBooks/logout.php">Sign out</a></li>
+  <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
+  <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
+  <li><a href="/BDBooks-PHP/admin/home.php">Samanta</a></li>
+  <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
 </ul>
 <div class="hero-bg">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">

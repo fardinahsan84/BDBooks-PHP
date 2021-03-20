@@ -2,12 +2,12 @@
 session_start();
 if(empty($_SESSION))
 {
-	header('Location:http://localhost/BDBooks/login.php');
+	header('Location:http://localhost/BDBooks-PHP/login.php');
 	exit();
 }
 if($_SESSION["type"] == "user")
 {
-  header('Location:http://localhost/BDBooks/login.php');
+  header('Location:http://localhost/BDBooks-PHP/login.php');
 	exit();
 }
 $filepath = "../data/bookdb.json";
@@ -57,21 +57,21 @@ span {color: #FF0000;}
 <body>
 <div class="heading">
 	<div class="site-logo">
-		<a target="_blank" href="/BDBooks/index.php">
-		<img src="/BDBooks/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
+		<a target="_blank" href="/BDBooks-PHP/index.php">
+		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
 		</a>
 	</div>
 	
 </div>
 <ul>
-  <li><a class="active" href="/BDBooks/index.php">Home</a></li>
+  <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-  <li><a href="/BDBooks/admin/allBooks.php">All books</a></li>
-  <li><a href="/BDBooks/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks/admin/home.php">Samanta</a></li>
-  <li><a href="/BDBooks/logout.php">Sign out</a></li>
+  <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
+  <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
+  <li><a href="/BDBooks-PHP/admin/home.php">Samanta</a></li>
+  <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
 </ul>
 <div class="hero">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
