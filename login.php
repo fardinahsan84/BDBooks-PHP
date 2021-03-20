@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
 				
-				header('Location: http://localhost/BDBooks/admin/home.php');
+				header('Location: http://localhost/BDBooks-PHP/admin/home.php');
 				exit();
 			}
 			//user login
@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
 				
-				header('Location: http://localhost/BDBooks/users/home.php');
+				header('Location: http://localhost/BDBooks-PHP/users/home.php');
 				exit();
 			}
 			else 
@@ -152,21 +152,21 @@ function test_input($data) {
 <body>
 <div class="heading">
 	<div class="site-logo">
-		<a target="_blank" href="/BDBooks/index.php">
-		<img src="/BDBooks/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
+		<a target="_blank" href="/BDBooks-PHP/index.php">
+		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
 		</a>
 	</div>
 	
 </div>
 <ul>
-  <li><a class="active" href="/BDBooks/index.php">Home</a></li>
+  <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-  <li><a href="/BDBooks/admin/allBooks.php">All books</a></li>
+  <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
   <li><a href="#about">New Arrival</a></li>
-  <li><a href="/BDBooks/login.php">Sign in</a></li>
-  <li><a href="/BDBooks/users/register.php">Sign up</a></li>
+  <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
+  <li><a href="/BDBooks-PHP/users/register.php">Sign up</a></li>
 </ul>
 <div class="hero-bg">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
@@ -178,7 +178,7 @@ function test_input($data) {
                <input type="password"  placeholder="password"  name="password" >
 			   
 				<input type="submit" value="Sign in" name="submit">
-				<a href ="/BDBooks/user/register.php">Register now!!<a>
+				<a href ="/BDBooks-PHP/user/register.php">Register now!!<a>
 				<span class="error"> <?php echo $U_P_Err;?></span>
       </div>
 

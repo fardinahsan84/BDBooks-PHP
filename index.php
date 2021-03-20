@@ -63,7 +63,7 @@ div.bottom {
 <div class="heading">
 	<div class="site-logo">
 		<a target="_blank" href="/BDBooks/index.php">
-		<img src="/BDBooks/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
+		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
 		</a>
 		<div class="search-container">
 			<form action="/action_page.php">
@@ -75,29 +75,29 @@ div.bottom {
 </div>
 
 <ul>
-  <li><a class="active" href="/BDBooks/index.php">Home</a></li>
+  <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
   <li><a href="#about">All books</a></li>
   <li><a href="#about">New Arrival</a></li>
-  <li><a href="/BDBooks/login.php">Sign in</a></li>
-  <li><a href="/BDBooks/users/register.php">Sign up</a></li>
+  <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
+  <li><a href="/BDBooks-PHP/users/register.php">Sign up</a></li>
 </ul>
 
 <div class="hero-bg">
    <div class="top">
 		<div class="gallery">
 		  <a target="_blank" href="img_5terre.jpg">
-			<img src="/BDBooks/assets/images/python.jpg" alt="Cinque Terre" width="600" height="400">
+			<img src="/BDBooks-PHP/assets/images/python.jpg" alt="Cinque Terre" width="600" height="400">
 		  <div class="desc">Add a description of the image here</div>
 		  </a>
 		  <input type="button" value="Buy now">
 		</div>
 
 		<div class="gallery">
-		  <a target="_blank" href="/BDBooks/users/bDetails.php?id=101&book=deyal">
-			<img src="/BDBooks/assets/images/Deyal.jpeg" alt="Forest" width="600" height="400">
+		  <a target="_blank" href="/BDBooks-PHP/users/bDetails.php?id=101&book=deyal">
+			<img src="/BDBooks-PHP/assets/images/Deyal.jpeg" alt="Forest" width="600" height="400">
 		  </a>
 		  <div class="desc">Add a description of the image here</div>
 		  <input type="button" value="Buy now">
@@ -105,7 +105,7 @@ div.bottom {
 
 		<div class="gallery">
 		  <a target="_blank" href="img_lights.jpg">
-			<img src="/BDBooks/assets/images/brishtibilash.jpg" alt="Northern Lights" width="600" height="400">
+			<img src="/BDBooks-PHP/assets/images/brishtibilash.jpg" alt="Northern Lights" width="600" height="400">
 		  </a>
 		  <div class="desc">Add a description of the image here</div>
 		  <input type="button" value="Buy now">
@@ -113,7 +113,7 @@ div.bottom {
 
 		<div class="gallery">
 		  <a target="_blank" href="img_mountains.jpg">
-			<img src="/BDBooks/assets/images/AajHimurBiye.jpg" alt="Mountains" width="600" height="400">
+			<img src="/BDBooks-PHP/assets/images/AajHimurBiye.jpg" alt="Mountains" width="600" height="400">
 		  </a>
 		  <div class="desc">Add a description of the image here</div>
 		  <input type="button" value="Buy now">
@@ -122,28 +122,28 @@ div.bottom {
 	<div class="bottom">
 	<div class="gallery">
 	  <a target="_blank" href="img_mountains.jpg">
-		<img src="/BDBooks/assets/images/ural.jpg" alt="Serina" width="600" height="400">
+		<img src="/BDBooks-PHP/assets/images/ural.jpg" alt="Serina" width="600" height="400">
 	  </a>
 	  <div class="desc">Add a description of the image here</div>
 	  <input type="button" value="Buy now">
 	</div>
 	<div class="gallery">
 	  <a target="_blank" href="img_mountains.jpg">
-		<img src="/BDBooks/assets/images/science.jpg" alt="science" width="600" height="400">
+		<img src="/BDBooks-PHP/assets/images/science.jpg" alt="science" width="600" height="400">
 	  </a>
 	  <div class="desc">Add a description of the image here</div>
 	  <input type="button" value="Buy now">
 	</div>
 	<div class="gallery">
 	  <a target="_blank" href="img_mountains.jpg">
-		<img src="/BDBooks/assets/images/ajami.jpg" alt="52BookCover" width="600" height="400">
+		<img src="/BDBooks-PHP/assets/images/ajami.jpg" alt="52BookCover" width="600" height="400">
 	  </a>
 	  <div class="desc">Add a description of the image here</div>
 	  <input type="button" value="Buy now">
 	</div>
 	<div class="gallery">
 	  <a target="_blank" href="img_mountains.jpg">
-		<img src="/BDBooks/assets/images/capler22B.jpg" alt="capler22B" width="600" height="400">
+		<img src="/BDBooks-PHP/assets/images/capler22B.jpg" alt="capler22B" width="600" height="400">
 	  </a>
 	  <div class="desc">Add a description </div>
 	  <input type="button" value="Buy now">
