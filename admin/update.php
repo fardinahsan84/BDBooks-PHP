@@ -198,7 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $data_decoded[$row]["uname"] = $uname;
             $data_decoded[$row]["password"] = $password;
             $data_decoded[$row]["recoveryEmail"] = $remail;
-            $data_decoded[$row]["type"] = 'user';
+            $data_decoded[$row]["type"] = 'admin';
             file_put_contents('../data/usersdb.json', json_encode($data_decoded));
             header('Location: http://localhost/BDBooks-PHP/admin/home.php');
             exit();

@@ -70,25 +70,29 @@ span {color: #FF0000;}
   <li><a href="#about">About</a></li>
   <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
   <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks-PHP/admin/home.php">Samanta</a></li>
+  <li><a href="/BDBooks-PHP/admin/home.php"><?php echo $_SESSION["email"];?></a></li>
   <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
 </ul>
 <div class="hero">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 		<div class="form-design">
 		<h1>Book added successfully</h1><br>
+		<?php for ($row=0; $row<count($data_decoded); $row++){ 
+			if($_GET["id"] == $data_decoded[$row]["id"]) {?>
 		<div class="image">
-			<img src="<?=@$data_decoded[1]["path"]?>" width="400" height="400" />
+			<img src="<?=@$data_decoded[$row]["path"]?>" width="400" height="400" />
 		</div>
 		<div class="info">
 		<?php 
-			echo "Book name :" . $data_decoded[1]["bname"] ."<br>";
-			echo "Author :" . $data_decoded[1]["author"] . "<br>";
-			echo "Price :" . $data_decoded[1]["price"] . "Tk" . "<br>";
-			echo "Publication :" . $data_decoded[1]["pub"] . "<br>";
-			echo "Description :" . $data_decoded[1]["des"];
+			echo "Book name :" . $data_decoded[$row]["bname"] ."<br>";
+			echo "Author :" . $data_decoded[$row]["author"] . "<br>";
+			echo "Price :" . $data_decoded[$row]["price"] . "Tk" . "<br>";
+			echo "Publication :" . $data_decoded[$row]["pub"] . "<br>";
+			echo "Description :" . $data_decoded[$row]["des"];
 		?>
 		</div>
+		<?php }
+		}?>
 		</div>
 </div>
 <div class="footer">

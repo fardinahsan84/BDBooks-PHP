@@ -187,27 +187,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
  
   if($id != "" && $bname != "" && $author != "" && $price != "" && $des !="" && $pub != "" && $file_field != "")
-   {
-		$target_dir = "../assets/uploads/";
-		$target_file = $target_dir . basename($_FILES["file_field"]["name"]);
-	   if (move_uploaded_file($_FILES["file_field"]["tmp_name"], $target_file))
-	   {
-			$data = array();
-			$json_string = file_get_contents("../data/bookdb.json");
-			$data = json_decode($json_string, true);
-			array_push($data, array('id' => $id, 'bname' => $bname, 'author' => $author, 'price' => $price,'des' => $des, 
-							'pub' => $pub,'path' => $target_file ));
-			$strNew = json_encode($data);
-			file_put_contents("../data/bookdb.json", $strNew);
-
-			header('Location: http://localhost/BDBooks-PHP/admin/bDetails.php');
-			exit();
-	   }
-   }
-   else
-   {
-	   echo 'upload error!!'; 
-   }
+  {
+      $target_dir = "../assets/uploads/";
+      $target_file = $target_dir . basename($_FILES["file_field"]["name"]);
+	    if (move_uploaded_file($_FILES["file_field"]["tmp_name"], $target_file))
+	    {
+          $data = array();
+          $json_string = file_get_contents("../data/bookdb.json");
+          $data = json_decode($json_string, true);
+          array_push($data, array('id' => $id, 'bname' => $bname, 'author' => $author, 'price' => $price,'des' => $des, 
+                  'pub' => $pub,'path' => $target_file ));
+          $strNew = json_encode($data);
+          file_put_contents("../data/bookdb.json", $strNew);
+          for($row =0; $row <count($data); $row++){
+            if($id == $data[$row]["id"]){
+              header('Location: http://localhost/BDBooks-PHP/admin/bDetails.php?id='.$id);
+              exit();
+            }
+          }
+	    }
+      else
+      {
+        echo 'upload error!!'; 
+      }
+  }
 }
 function test_input($data) {
   $data = trim($data);
@@ -215,7 +218,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-  ?>
+?>
 </head>
 <body>
 <div class="heading">
@@ -233,7 +236,7 @@ function test_input($data) {
   <li><a href="#about">About</a></li>
   <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
   <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks-PHP/admin/home.php">Samanta</a></li>
+  <li><a href="/BDBooks-PHP/admin/home.php"><?php echo $_SESSION["email"] ?></a></li>
   <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
 </ul>
 <div class="hero-bg">
@@ -279,6 +282,5 @@ function test_input($data) {
 <div class="footer">
 	<?php include '../assets/layout/footer.php' ; ?>
 </div>
-</center>
 </body>
 </html>

@@ -121,6 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			{
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
+				$_SESSION["type"] = "admin";
 				
 				header('Location: http://localhost/BDBooks-PHP/admin/home.php');
 				exit();
@@ -130,6 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			{ 
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $password;
+				$_SESSION["type"] = "user";
 				
 				header('Location: http://localhost/BDBooks-PHP/users/home.php');
 				exit();

@@ -62,7 +62,7 @@ span {color: #FF0000;}
   <li><a href="#about">About</a></li>
   <li><a href="#about">All books</a></li>
   <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks-PHP/admin/home.php">Samanta</a></li>
+  <li><a href="/BDBooks-PHP/admin/home.php"><?php echo $_SESSION["email"];?></a></li>
   <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
 </ul>
 <div class="hero-bg">

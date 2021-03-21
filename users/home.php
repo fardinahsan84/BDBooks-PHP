@@ -5,6 +5,11 @@ if(empty($_SESSION))
 	header('Location:http://localhost/BDBooks-PHP/login.php');
 	exit();
 }
+if($_SESSION["type"] == "admin")
+{
+  header('Location:http://localhost/BDBooks-PHP/login.php');
+	exit();
+}
 $filepath = "../data/usersdb.json";
 $f3 = fopen($filepath, "r");
 $data = fread($f3, filesize($filepath));
