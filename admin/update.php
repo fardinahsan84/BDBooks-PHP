@@ -225,8 +225,8 @@ function test_input($data) {
 <ul>
     <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
     <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
+    <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
     <li><a href="#about">All books</a></li>
     <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
     <li><a href="/BDBooks-PHP/admin/home.php"><?php echo $_SESSION["email"] ;?></a></li>

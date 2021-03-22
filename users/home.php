@@ -30,8 +30,8 @@ span {color: #FF0000;}
 th {
   text-align: left;
 }
-</head>
 </style>
+</head>
 <body>
 <body>
 <div class="heading">
@@ -45,9 +45,9 @@ th {
 <ul>
   <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
   <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#about">All books</a></li>
+  <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
+  <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
+  <li><a href="/BDBooks-PHP/book/allBooks.php">All books</a></li>
   <li><a href="/BDBooks-PHP/admin/allBooks.php">New Arrival</a></li>
   <li><a href="/BDBooks-PHP/users/home.php"><?php echo $_SESSION["email"]; ?></a></li>
   <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>

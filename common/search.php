@@ -1,15 +1,15 @@
 <?php
-session_start();
-if(empty($_SESSION))
-{
-	header('Location:http://localhost/BDBooks-PHP/login.php');
-	exit();
-}
-if($_SESSION["type"] == "user")
-{
-  header('Location:http://localhost/BDBooks-PHP/login.php');
-	exit();
-}
+// session_start();
+// if(empty($_SESSION))
+// {
+// 	header('Location:http://localhost/BDBooks-PHP/login.php');
+// 	exit();
+// }
+// if($_SESSION["type"] == "user")
+// {
+//   header('Location:http://localhost/BDBooks-PHP/login.php');
+// 	exit();
+// }
 $filepath = "../data/bookdb.json";
 $f3 = fopen($filepath, "r");
 $data = fread($f3, filesize($filepath));
@@ -23,10 +23,12 @@ $data_decoded = json_decode($data, true);
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../assets/css/header.css">
 <title>
-all books
+search
 </title>
 <style>
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .error {color: #FF0000;}
 h1 {
 	text-align:center;
@@ -37,14 +39,14 @@ span {color: #FF0000;
 }
 .image {
 	float :center;
-	margin-left : 15em;
+	
 	margin-top: 1em;
 }
 .info {
 	float:right;
 	margin:0 25em 0 2em;
 	font-weight: bold;
-	text-aligh: left;
+	text-align: left;
 	font-size: 20px;
 
 }
@@ -57,12 +59,17 @@ span {color: #FF0000;
 	padding-top: 2em;
 }
 .container .box { 
+                margin-left:auto;
+                margin-right:auto;
                 width:650px; 
-                margin:50px; 
+                
                 display:table; 
             } 
             .container .box .box-row { 
                 display:table-row; 
+                font-weight:bold;
+                font-size: 20px;
+                
             } 
             .container .box .box-cell { 
                 display:table-cell; 
@@ -70,20 +77,23 @@ span {color: #FF0000;
                 padding:5px; 
             } 
             .container .box .box-cell.box1 { 
-                float :center;
-
+                
+                margin-left:auto;
+                margin-right:auto;
+                
              } 
             .container .box .box-cell.box2 { 
 				float:right;
 				font-weight: bold;
-				text-aligh: left;
+				text-align: left;
 				font-size: 20px;
-				margin-bottom: 70px;
+				margin-bottom: 150px;
             } 
 			.container .box .box-cell.box2 a { 
 				text-decoration:none;
 				font-size:bold;
 			}
+
 .button {
   font-family:'Open Sans';
   font-size: 16px;
@@ -93,7 +103,6 @@ span {color: #FF0000;
   border-radius: .25em;
   text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
 }
-
 .primary {
   line-height:40px;
   transition:ease-in-out .2s;
@@ -146,40 +155,41 @@ span {color: #FF0000;
   <li><a href="#news">News</a></li>
   <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
   <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
-  <li><a href="/BDBooks-PHP/book/allBooks.php">All books</a></li>
-  <li><a href="/BDBooks-PHP/admin/addBooks.php">Add books</a></li>
-  <li><a href="/BDBooks-PHP/admin/home.php"><?php echo $_SESSION["email"] ?></a></li>
-  <li><a href="/BDBooks-PHP/logout.php">Sign out</a></li>
+  <li><a href="/BDBooks-PHP/common/allBooks.php">All books</a></li>
+  <li><a href="/BDBooks-PHP/common/New Arrival.php">Add books</a></li>
+  <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
+  <li><a href="/BDBooks-PHP/user/register.php">Sign up</a></li>
 </ul>
 <div class="hero">
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 	<div class="form-design">
-		<h1>All books list</h1><br>
+		<h1>Search result</h1><br>
 		
 					<?php 
 					if($data_decoded!=null){
-					for ($row=0; $row<count($data_decoded); $row++){ ?>
+					for ($row=0; $row<count($data_decoded); $row++){ 
+                        if(strtoupper($_GET["search"])== strtoupper($data_decoded[$row]["bname"])){ ?>
 				<div class="container"> 
 					<div class="box"> 
 						<div class="box-row">
 							<div class="box-cell box1">
-							<img src="<?=@$data_decoded[$row]["path"]?>" width="300" height="350" />
+							<img src="<?=@$data_decoded[$row]["path"]?>" width="350" height="400" />
 							</div>
 							<div class="box-cell box2">
 							<?php echo "Book name :" . $data_decoded[$row]["bname"] ."<br>";
 							echo "Author :" . $data_decoded[$row]["author"] . "<br>";
 							echo "Price :" . $data_decoded[$row]["price"] . "Tk" . "<br>";
 							echo "Publication :" . $data_decoded[$row]["pub"] . "<br>";
-							echo "Description :" . $data_decoded[$row]["des"] ."<br><br>"; ?>
-							<a class="button primary edit" href="/BDBooks-PHP/admin/editBook.php?id=<?php echo $data_decoded[$row]["id"];?>">Edit</a>
-							<a class="button primary delete" href="/BDBooks-PHP/admin/deleteBook.php?id=<?php echo $data_decoded[$row]["id"];?>">Delete</a>
+							?>
 							</div>
 						</div>
+                        <div class="box-row">
+                            <?php echo "Description :" . $data_decoded[$row]["des"] ."<br><br>"; ?>
+                        </div>
 					</div>
 				</div>
-					<?php } }
-					else{ echo "<span>There is no book in the array</span>"; }?>
-				
+					<?php } } }
+					    else{ echo "<span>There is no book name </span>"; }?>				
 	</div>
 </div>
 <div class="footer">

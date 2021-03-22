@@ -66,7 +66,7 @@ div.bottom {
 		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
 		</a>
 		<div class="search-container">
-			<form action="/action_page.php">
+			<form action="/BDBooks-PHP/common/search.php" method="get">
 			  <input type="text" placeholder="Search book.." name="search">
 			  <button type="submit"><i class="fa fa-search"></i></button>
 			</form>
@@ -77,8 +77,8 @@ div.bottom {
 <ul>
   <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
   <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
+  <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
   <li><a href="#about">All books</a></li>
   <li><a href="#about">New Arrival</a></li>
   <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
