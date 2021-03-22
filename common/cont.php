@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/header.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,39 +12,9 @@ body {
 * {
   box-sizing: border-box;
 }
-*{
-	margin :0px;
-	padding : 0px;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
 
-li {
-  float: left;
-  width: 12%;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-.heading .site-logo {
-  margin-left: 20px;
-}
 /* Style inputs */
-input[type=text],[type=email], select, textarea {
+input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -53,7 +22,6 @@ input[type=text],[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
 
 input[type=submit] {
   background-color: #4CAF50;
@@ -98,43 +66,33 @@ input[type=submit]:hover {
 }
 </style>
 </head>
-<div class="heading">
-	<div class="site-logo">
-		<a target="_blank" href="/BDBooks-PHP/index.php">
-		<img src="/BDBooks-PHP/assets/images/bookslogo.PNG" alt="logo" width="300" height="60">
-		</a>
-	</div>
-</div>
-<ul>
-  <li><a class="active" href="/BDBooks-PHP/index.php">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
-  <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
-  <li><a href="/BDBooks-PHP/common/allBooks.php">All books</a></li>
-  <li><a href="/BDBooks-PHP/common/New Arrival.php">Add books</a></li>
-  <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
-  <li><a href="/BDBooks-PHP/user/register.php">Sign up</a></li>
-</ul>
+
 <body>
+
+<h2>Responsive Contact Section</h2>
+<p>Resize the browser window to see the effect.</p>
 
 <div class="container">
   <div style="text-align:center">
     <h2>Contact Us</h2>
-    <p>Official mail: bdbooks@gmail.com</p>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
   </div>
   <div class="row">
     <div class="column">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.2641000097055!2d90.4127929750428!3d23.831679838197292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c65e78f46ee1%3A0x3e009fd37c89634f!2sNikunja%202%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1616428605807!5m2!1sen!2sbd" width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.2641000097055!2d90.4127929750428!3d23.831679838197292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c65e78f46ee1%3A0x3e009fd37c89634f!2sNikunja%202%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1616428605807!5m2!1sen!2sbd" width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="column">
-    <form action="/action_page.php" method="post">
+      <form action="/action_page.php">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
@@ -143,10 +101,5 @@ input[type=submit]:hover {
   </div>
 </div>
 
-<div class="footer">
-  <?php include '../assets/layout/footer.php' ; ?>
-  
-</div>
 </body>
-
 </html>

@@ -165,7 +165,6 @@ function test_input($data) {
   <li><a href="#news">News</a></li>
   <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
   <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
-  <li><a href="/BDBooks-PHP/book/allBooks.php">All books</a></li>
   <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
   <li><a href="#about">New Arrival</a></li>
   <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>

@@ -40,7 +40,6 @@ input[type=button]{
     font-size: 1.3em;
     cursor: pointer;
 }
-
 input[type=button]:hover{
     background-color: #d17c06;
 }
@@ -79,7 +78,7 @@ div.bottom {
   <li><a href="#news">News</a></li>
   <li><a href="/BDBooks-PHP/common/contact.php">Contact</a></li>
   <li><a href="/BDBooks-PHP/common/about.php">About</a></li>
-  <li><a href="#about">All books</a></li>
+  <li><a href="/BDBooks-PHP/admin/allBooks.php">All books</a></li>
   <li><a href="#about">New Arrival</a></li>
   <li><a href="/BDBooks-PHP/login.php">Sign in</a></li>
   <li><a href="/BDBooks-PHP/users/register.php">Sign up</a></li>
@@ -150,10 +149,10 @@ div.bottom {
 	</div>
 	</div>
 </div>
+
 <div class="footer">
   <?php include 'assets/layout/footer.php' ; ?>
 </div>
-</center>
 </body>
 </html>
 
